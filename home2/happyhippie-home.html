@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Homepage 2</title>
+
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        #loader-wrapper {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 110;
+            overflow: hidden;
+            background: #000;
+            display: flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+        }
+        .preloader, .preloader:before, .preloader:after {
+            border-radius: 35%;
+            border: 6px solid transparent;
+        }
+
+        .preloader {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 250px;
+            height: 250px;
+            margin-top: -125px;
+            margin-left: -125px;
+            border-top-color: #FDA1A4;
+            -webkit-animation: spin 1s linear infinite;
+            /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 1s linear infinite;
+            /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+
+        .preloader:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-top-color: #7a7a7a;
+            -webkit-animation: spin-reverse 1.7s linear infinite;
+            /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin-reverse 1.7s linear infinite;
+            /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+
+        .preloader:after {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            border-top-color: #fff;
+            -webkit-animation: spin 1.7s linear infinite;
+            /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 1.7s linear infinite;
+            /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(0deg);
+                /* IE 9 */
+                transform: rotate(0deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(360deg);
+                /* IE 9 */
+                transform: rotate(360deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+        }
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(0deg);
+                /* IE 9 */
+                transform: rotate(0deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(360deg);
+                /* IE 9 */
+                transform: rotate(360deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+        }
+        @-moz-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(0deg);
+                /* IE 9 */
+                transform: rotate(0deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(360deg);
+                /* IE 9 */
+                transform: rotate(360deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+        }
+        @-webkit-keyframes spin-reverse {
+            0% {
+                -webkit-transform: rotate(0deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(0deg);
+                /* IE 9 */
+                transform: rotate(0deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            100% {
+                -webkit-transform: rotate(-360deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(-360deg);
+                /* IE 9 */
+                transform: rotate(-360deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+        }
+        @keyframes spin-reverse {
+            0% {
+                -webkit-transform: rotate(0deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(0deg);
+                /* IE 9 */
+                transform: rotate(0deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            100% {
+                -webkit-transform: rotate(-360deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(-360deg);
+                /* IE 9 */
+                transform: rotate(-360deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+        }
+        @-moz-keyframes spin-reverse {
+            0% {
+                -webkit-transform: rotate(0deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(0deg);
+                /* IE 9 */
+                transform: rotate(0deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            100% {
+                -webkit-transform: rotate(-360deg);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: rotate(-360deg);
+                /* IE 9 */
+                transform: rotate(-360deg);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader-wrapper">
+    <div class="preloader"></div>
+</div>
+
+<header class="header no-shadow">
+    <a href="home2.html" id="logo"><img src="../img/cartel-logo-black.png" alt=""></a>
+    <div class="header-content">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-list-item sub-menu-item">
+                    <a href="#" class="nav-item-link active">Home<i class="fa fa-angle-down"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="../home1/home1.html">Home Barber Shop</a></li>
+                        <li><a class="active" href="home2.html">Home Nail Bar</a></li>
+                        <li><a href="../home3/home3.html">Home Spa Salon</a></li>
+                        <li><a href="../home4/home4.html">Home Beauty Salon</a></li>
+                        <li><a href="../home5/home5.html">Home Hair Salon</a></li>
+                    </ul>
+                </li>
+                <li class="nav-list-item"><a href="about.html" class="nav-item-link">About us</a></li>
+                <li class="nav-list-item"><a href="services.html" class="nav-item-link">Services</a></li>
+                <li class="nav-list-item"><a href="team.html" class="nav-item-link">Staff</a></li>
+                <li class="nav-list-item sub-menu-item">
+                    <a href="#" class="nav-item-link">Gallery<i class="fa fa-angle-down"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="gallery1.html">Gallery 1</a></li>
+                        <li><a href="gallery2.html">Gallery 2</a></li>
+                        <li><a href="gallery3.html">Gallery 3</a></li>
+                        <li><a href="gallery-detail.html">Gallery Detail</a></li>
+                    </ul>
+                </li>
+                <li class="nav-list-item sub-menu-item">
+                    <a href="#" class="nav-item-link">Products<i class="fa fa-angle-down"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="products1.html">Products 1</a></li>
+                        <li><a href="products2.html">Products 2</a></li>
+                        <li><a href="products3.html">Products 3</a></li>
+                        <li><a href="products4.html">Products 4</a></li>
+                        <li><a href="products5.html">Products 5</a></li>
+                        <li><a href="product-detail1.html">Product Detail</a></li>
+                        <li><a href="product-detail2.html">Product Detail 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-list-item sub-menu-item">
+                    <a href="#" class="nav-item-link">Contacts<i class="fa fa-angle-down"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="contacts1.html">Contacts 1</a></li>
+                        <li><a href="contacts2.html">Contacts 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <a href="cart.html" class="busket">
+            <img src="../img/busket.png" alt="">
+            <span class="busket-amount">1</span>
+            <span class="busket-price">
+                total: <i>149.95$</i>
+            </span>
+        </a>
+        <div class="sign-up">
+            <a href="#" class="open-popup" data-rel="1">Log in</a>
+            <span> / </span>
+            <a href="#" class="open-popup" data-rel="2">Sing up</a>
+        </div>
+    </div>
+    <div class="menu-mobile-wrap">
+        <div class="menu-mobile">
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<div class="empty-space marg-md-b70 marg-lg-b110"></div>
+
+<div class="swiper-container" data-loop="1" data-auto-height="1">
+    <div class="swiper-button-prev type-2 hidden-xs"></div>
+    <div class="swiper-button-next type-2 hidden-xs"></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="tt-slider" style="background-image:url(../img/homepage2/baner-bg.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="simple-text x-large">
+                                <h1 class="h1 light">the nail bar</h1>
+                                <h2 class="h2  light">we make magic</h2>
+                            </div>
+                            <div class="empty-space marg-lg-b30"></div>
+                            <a href="about.html" class="button type_2 white lg"><span>Learn More</span></a>
+                            <a href="#booking-anchor" class="button type_2 lg anchor-link"><span>Book Now</span></a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="tt-slider" style="background-image:url(../img/homepage2/baner-bg.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="simple-text x-large">
+                                <h1 class="h1 light">the nail bar</h1>
+                                <h2 class="h2  light">we make magic</h2>
+                            </div>
+                            <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                            <a href="about.html" class="button type_2 white lg"><span>Learn More</span></a>
+                            <a href="#booking-anchor" class="button type_2 lg anchor-link"><span>Book Now</span></a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination swiper-pagination-white hidden-lg"></div>
+</div>
+
+<div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b140"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="simple-text center">
+                <div class="bf_af">
+                    <h2 class="h2">Who We are</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi deleniti doloribus est ex harum
+                    iste iusto quibusdam quidem quisquam?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="empty-space marg-xs-b30 marg-sm-b40 marg-lg-b50"></div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="advertising center">
+                <div class="hov2">
+                    <img class="responsive" src="../img/homepage2/img1.jpg" alt="">
+                </div>
+                <div class="empty-space marg-lg-b20"></div>
+                <div class="simple-text">
+                    <p>Get <span>-60% </span>for plain manicure to <span>31.11.2016</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="advertising center">
+                <div class="hov2">
+                    <img class="responsive" src="../img/homepage2/img2.jpg" alt="">
+                </div>
+                <div class="empty-space marg-lg-b20"></div>
+                <div class="simple-text">
+                    <p>Make <span>4 </span>manicures and get <span>5</span>th <span>for free</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="advertising center">
+                <div class="hov2">
+                    <img class="responsive" src="../img/homepage2/img3.jpg" alt="">
+                </div>
+                <div class="empty-space marg-lg-b20"></div>
+                <div class="simple-text">
+                    <p>Buy a gift <span>certificate </span>and win trip to <span>Europe</span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="empty-space marg-xs-b0 marg-sm-b30 marg-lg-b50"></div>
+            <div class="simple-text center">
+                <a href="#" class="button type_2 lg"><span>See all offers</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b140"></div>
+
+<div class="container-fluid">
+    <div class="row no_pdfd">
+
+        <div class="col-md-3 col-sm-6">
+            <div class="wrapperManik cust">
+                <div class="blockManik hov2">
+                    <div class="imgManik" style="background-image:url(../img/homepage2/manic1.jpg)"></div>
+                </div>
+
+                <div class="blockManik">
+                    <div class="descriptionManil">
+                        <div class="simple-text">
+                            <div class="h4">manicure</div>
+                        </div>
+                        <div class="empty-space marg-lg-b20"></div>
+                        <div class="price">
+                            <span>from <b>50$</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="wrapperManik">
+                <div class="blockManik hov2">
+                    <div class="imgManik" style="background-image:url(../img/homepage2/manic2.jpg)"></div>
+                </div>
+
+                <div class="blockManik">
+                    <div class="descriptionManil">
+                        <div class="simple-text">
+                            <div class="h4">Deep conditioning</div>
+                        </div>
+                        <div class="empty-space marg-lg-b20"></div>
+                        <div class="price">
+                            <span>from <b>120$</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="wrapperManik cust">
+                <div class="blockManik hov2">
+                    <div class="imgManik" style="background-image:url(../img/homepage2/manic4.jpg)"></div>
+                </div>
+
+                <div class="blockManik">
+                    <div class="descriptionManil">
+                        <div class="simple-text">
+                            <div class="h4">pedicure</div>
+                        </div>
+                        <div class="empty-space marg-lg-b20"></div>
+                        <div class="price">
+                            <span>from <b>65$</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="wrapperManik">
+                <div class="blockManik hov2">
+                    <div class="imgManik" style="background-image:url(../img/homepage2/manic3.jpg)"></div>
+                </div>
+
+                <div class="blockManik">
+                    <div class="descriptionManil">
+                        <div class="simple-text">
+                            <div class="h4">art</div>
+                        </div>
+                        <div class="empty-space marg-lg-b20"></div>
+                        <div class="price">
+                            <span>from <b>100$</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b140"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="simple-text center">
+                <div class="bf_af">
+                    <h2 class="h2">Our best team</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, minus.</p>
+            </div>
+            <div class="empty-space marg-xs-30 marg-sm-b40 marg-lg-b75"></div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="our_team center hov">
+                <img class="responsive" src="../img/homepage2/woman1.jpg" alt="">
+                <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                <div class="simple-text center small">
+                    <h4 class="h4">Norah Jones</h4>
+                    <span>nail art master</span>
+                </div>
+                <ul class="social type2">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="our_team center hov">
+                <img class="responsive" src="../img/homepage2/woman2.jpg" alt="">
+                <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                <div class="simple-text center small">
+                    <h4 class="h4">Rachel Green</h4>
+                    <span>manicure master</span>
+                </div>
+                <ul class="social type2">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="our_team center hov">
+                <img class="responsive" src="../img/homepage2/woman3.jpg" alt="">
+                <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                <div class="simple-text center small">
+                    <h4 class="h4">Phoebe Buffay</h4>
+                    <span>manicure master</span>
+                </div>
+                <ul class="social type2">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="our_team center hov">
+                <img class="responsive" src="../img/homepage2/woman4.jpg" alt="">
+                <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                <div class="simple-text center small">
+                    <h4 class="h4">Monica Bing</h4>
+                    <span>pedicure master</span>
+                </div>
+                <ul class="social type2">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="empty-space marg-sm-b50 marg-md-b100 marg-lg-b140"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="simple-text center">
+                <div class="bf_af">
+                    <h2 class="h2">Gallery</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, minus.</p>
+            </div>
+            <div class="empty-space marg-xs-b30 marg-sm-b40 marg-lg-b60"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div id="filters" class="button-group type-2 center">
+                <button class="btnGallery is-checked" data-filter="*">Show all</button>
+                <button class="btnGallery" data-filter=".manicure">Manicure</button>
+                <button class="btnGallery" data-filter=".pedicure">Pedicure</button>
+                <button class="btnGallery" data-filter=".salon">Salon</button>
+                <button class="btnGallery" data-filter=".work">Work</button>
+            </div>
+
+            <div class="empty-space marg-xs-b10 marg-sm-b30 marg-lg-b60"></div>
+            <div class="galleryHome2 gridMasonry">
+                <div class="grid-sizer"></div>
+                <div class="grid-item galleryHome2_Iteams hov2 manicure"
+                     style="background-image:url(../img/homepage2/gallery1.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams height1 hov2 manicure"
+                     style="background-image:url(../img/homepage2/gallery3.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams hov2 pedicure"
+                     style="background-image:url(../img/homepage2/gallery4.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams height2 hov2 pedicure"
+                     style="background-image:url(../img/homepage2/gallery6.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams hov2 salon"
+                     style="background-image:url(../img/homepage2/gallery9.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams height2 hov2 salon"
+                     style="background-image:url(../img/homepage2/gallery7.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams hov2 work"
+                     style="background-image:url(../img/homepage2/gallery2.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams hov2 work"
+                     style="background-image:url(../img/homepage2/gallery5.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams hov2 manicure"
+                     style="background-image:url(../img/homepage2/gallery8.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams height2 hov2 salon"
+                     style="background-image:url(../img/homepage2/gallery10.jpg);"></div>
+                <div class="grid-item galleryHome2_Iteams height2 hov2 work"
+                     style="background-image:url(../img/homepage2/gallery11.jpg);"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="testimonials-anchor">
+    <div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b140"></div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="simple-text center">
+                <div class="bf_af">
+                    <h2 class="h2">What our clients say</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, minus.</p>
+            </div>
+            <div class="empty-space marg-xs-b30 marg-sm-b40 marg-lg-b60"></div>
+        </div>
+    </div>
+
+    <div class="swiper-container" data-breakpoints="1" data-slides-per-view="3" data-space-between="70"
+         data-xs-slides="1" data-md-slides="2" data-sm-slides="2">
+
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="clietns center">
+                    <img src="../img/homepage2/user.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <div class="simple-text">
+                        <h5 class="h5">Jessica Chastain</h5>
+                    </div>
+                    <div class="empty-space marg-sm-b15 marg-lg-b15"></div>
+                    <span class="lighter small">housewife</span>
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <em>"</em>
+                    <div class="simple-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatibus sequi
+                            repellendus quidem eius. Nam cumque labore ipsa nulla dicta a molestias rerum totam
+                            architecto!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="clietns center">
+                    <img src="../img/homepage2/user2.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <div class="simple-text">
+                        <h5 class="h5">Kate Beckett</h5>
+                    </div>
+                    <div class="empty-space marg-sm-b15 marg-lg-b15"></div>
+                    <span class="lighter small">teacher</span>
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <em>"</em>
+                    <div class="simple-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatibus sequi
+                            repellendus quidem eius. Nam cumque labore ipsa nulla dicta a molestias rerum totam
+                            architecto!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="clietns center">
+                    <img src="../img/homepage2/user3.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <div class="simple-text">
+                        <h5 class="h5">Lilly Collins</h5>
+                    </div>
+                    <div class="empty-space marg-sm-b15 marg-lg-b15"></div>
+                    <span class="lighter small">prosecutor's assistant</span>
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <em>"</em>
+                    <div class="simple-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatibus sequi
+                            repellendus quidem eius. Nam cumque labore ipsa nulla dicta a molestias rerum totam
+                            architecto!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="clietns center">
+                    <img src="../img/homepage2/user.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <div class="simple-text">
+                        <h6 class="h6">Jessica Chastain</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b15 marg-lg-b15"></div>
+                    <span class="lighter">housewife</span>
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <em>"</em>
+                    <div class="simple-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatibus sequi
+                            repellendus quidem eius. Nam cumque labore ipsa nulla dicta a molestias rerum totam
+                            architecto!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="clietns center">
+                    <img src="../img/homepage2/user2.png" alt="">
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <div class="simple-text">
+                        <h6 class="h6">Kate Beckett</h6>
+                    </div>
+                    <div class="empty-space marg-sm-b15 marg-lg-b15"></div>
+                    <span class="lighter">teacher</span>
+                    <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
+                    <em>"</em>
+                    <div class="simple-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatibus sequi
+                            repellendus quidem eius. Nam cumque labore ipsa nulla dicta a molestias rerum totam
+                            architecto!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="empty-space marg-lg-b60"></div>
+        <div class="swiper-pagination type-2"></div>
+    </div>
+</div>
+
+<div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b140"></div>
+
+<div class="banner price_table-wrap" style="background-image:url(../img/homepage2/offers-bg.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="banner_content">
+                    <div class="price_table">
+                        <div class="simple-text">
+                            <h6 class="h4">Simple Package</h6>
+                        </div>
+                        <div class="empty-space marg-sm-b20 marg-lg-b40"></div>
+                        <div class="price">
+                            <span>290$</span>
+                        </div>
+                        <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                        <ul class="lighter small">
+                            <li>Plain Manicure</li>
+                            <li>Plain Peducire</li>
+                            <li>Single Colour</li>
+                            <li>Hot Mittens &#33; Paraffin</li>
+                            <li>Hot Vream Hand Soak</li>
+                            <li>Hot Cream Foot Soak</li>
+                        </ul>
+                        <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                        <a href="#booking-anchor" class="button type_2 anchor-link"><span>Book Now</span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-4">
+                <div class="empty-space marg-xs-b30"></div>
+                <div class="banner_content">
+                    <div class="price_table">
+                        <div class="simple-text">
+                            <h6 class="h4">Premium Package</h6>
+                        </div>
+                        <div class="empty-space marg-sm-b20 marg-lg-b40"></div>
+                        <div class="price">
+                            <span>350$</span>
+                        </div>
+                        <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                        <ul class="lighter small">
+                            <li>Plain Manicure</li>
+                            <li>Plain Peducire</li>
+                            <li>Single Colour</li>
+                            <li>Hot Mittens &#33; Paraffin</li>
+                            <li>Hot Vream Hand Soak</li>
+                            <li>Hot Cream Foot Soak</li>
+                        </ul>
+                        <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                        <a href="#booking-anchor" class="button type_2 anchor-link"><span>Book Now</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="empty-space marg-xs-b30"></div>
+                <div class="banner_content">
+                    <div class="price_table">
+                        <div class="simple-text">
+                            <h6 class="h4">Luxury Package</h6>
+                        </div>
+                        <div class="empty-space marg-sm-b20 marg-lg-b40"></div>
+                        <div class="price">
+                            <span>550$</span>
+                        </div>
+                        <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                        <ul class="lighter small">
+                            <li>Plain Manicure</li>
+                            <li>Plain Peducire</li>
+                            <li>Single Colour</li>
+                            <li>Hot Mittens &#33; Paraffin</li>
+                            <li>Hot Vream Hand Soak</li>
+                            <li>Hot Cream Foot Soak</li>
+                        </ul>
+                        <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                        <a href="#booking-anchor" class="button type_2 anchor-link"><span>Book Now</span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b140"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="simple-text center">
+                <div class="bf_af">
+                    <h2 class="h2">Products</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, minus.</p>
+            </div>
+            <div class="empty-spacec marg-xs-b30 marg-sm-b40 marg-lg-b60"></div>
+        </div>
+    </div>
+    <!-- --------------------------------------------TABS START-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tabs-block product-tabs center">
+                <div class="tab-menu active lighter">Manicure</div>
+                <div class="tab-menu lighter">Pedicure</div>
+                <div class="tab-menu lighter">Art</div>
+                <div class="tab-menu lighter last">Other</div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <div class="tab-entry" style="display: block;">
+
+                    <div class="product_team">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs1.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup" data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Qpi Nail Envy</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">90.00$</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup" data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Qpi Nail File Edge</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">59.99$</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs2.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup" data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Cuccio Colour Venner</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">130.00$</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs3.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup" data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Leighton Denny</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">55.45$</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-entry">
+
+                    <div class="product_team">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs1.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup" data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Qpi Nail Envy</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">90.00$</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup" data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Qpi Nail File Edge</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">59.99$</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs3.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup" data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Leighton Denny</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">55.45$</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-entry">
+
+                    <div class="product_team">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs1.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup" data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Qpi Nail Envy</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">90.00$</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup" data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Qpi Nail File Edge</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">59.99$</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-entry">
+
+                    <div class="product_team">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="product hov products-view">
+                                    <div class="hov3">
+                                        <img class="responsive" src="../img/homepage2/tabs1.jpg" alt="">
+                                        <div class="hidden_cn">
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2 white open-popup"
+                                                   data-rel="3"><span>Quick View</span></a>
+                                            </div>
+                                            <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                                            <div class="wrapp_btn">
+                                                <a href="#" class="button type_2"><span>ADD to Cart</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="simple-text small">
+                                        <h6 class="h5 product-title">Qpi Nail Envy</h6>
+                                        <p class="product-description">Lorem ipsum dolor sit amet, cons adipisicing elit</p>
+                                    </div>
+                                    <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
+                                    <div class="price">
+                                        <span class="price-amount">90.00$</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------------------------TABS END-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="simple-text center">
+                <a href="products1.html" class="button type_2 lg"><span>See all products</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="booking-anchor">
+    <div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b140"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="contactUS_descr">
+                <div class="simple-text">
+                    <div class="bf_af">
+                        <h2 class="h2">Contacts</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, hic.</p>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b60"></div>
+                <div class="contact_info"><span>Phone: </span><a href="tel:+80442343456">8 (044) 234 34 56</a></div>
+                <div class="contact_info"><span>Address: </span>USA, NY, 7th Street, 89/217</div>
+                <div class="contact_info"><span>Email: </span><a
+                        href="mailto:spasalon@cartel.com">spasalon@cartel.com</a></div>
+                <div class="empty-space marg-sm-b15 marg-lg-b50"></div>
+                <div class="simple-text">
+                    <div class="h5">
+                        Subscribe to our news
+                    </div>
+                </div>
+                <div class="empty-space marg-lg-b25"></div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="subscribe-form">
+                            <input type="text" class="simple-input" placeholder="Your e-mail:">
+                            <a href="#" class="button type_2"><span>Subscribe</span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="simple-text center-xs">
+                <div class="bf_af">
+                    <h2 class="h2">Booking form</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, hic.</p>
+            </div>
+            <div class="empty-space marg-sm-b30 marg-lg-b60"></div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <input class="simple-input" type="text" placeholder="Name">
+                    <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                    <input class="simple-input" type="email" placeholder="Email">
+                    <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                    <div class="simple-select style-2">
+                        <select>
+                            <option>Service</option>
+                            <option>Service 1</option>
+                            <option>Service 2</option>
+                            <option>Service 3</option>
+                        </select>
+                    </div>
+                    <div class="empty-space marg-xs-b10"></div>
+                </div>
+
+                <div class="col-sm-6">
+                    <input class="simple-input" type="text" placeholder="Phone">
+                    <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                    <input class="simple-input" type="text" placeholder="Date">
+                    <div class="empty-space marg-sm-b10 marg-lg-b10"></div>
+                    <div class="simple-select style-2">
+                        <select>
+                            <option>Master</option>
+                            <option>Master 1</option>
+                            <option>Master 2</option>
+                            <option>Master 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="empty-space marg-sm-b30 marg-lg-b40"></div>
+            <div class="right"><a href="#" class="button type_2"><span>submit</span></a></div>
+        </div>
+    </div>
+</div>
+
+<div class="empty-space marg-sm-b80 marg-md-b100 marg-lg-b140"></div>
+
+<!--map-->
+<div class="map" id="map-canvas" data-lat="40.677763" data-lng="-73.943869" data-zoom="13"></div>
+<div class="addresses-block">
+    <a class="marker" data-lat="40.675653" data-lng="-73.936754"
+       data-string="1. Here is some address or email or phone or something else..."></a>
+</div>
+<!--map-->
+
+<footer class="footer" style="background-color: #1f1e1e">
+    <div class="empty-space marg-lg-b65"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-logo-part simple-text">
+                    <a href="#" class="footer-logo">
+                        <img src="../img/cartel-logo.png" alt="">
+                        <span class="h5 light">The Nail bar</span>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur consequatur
+                        consequuntur dicta dolor itaque provident quasi quia velit voluptate.</p>
+                </div>
+                <div class="empty-space marg-lg-b35"></div>
+                <ul class="social">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                </ul>
+                <div class="empty-space marg-lg-b40"></div>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col-md-offset-0 col-md-4 col-sm-5 col-sm-offset-1">
+                <div class="whoWe_are_descr">
+                    <div class="simple-text">
+                        <h5 class="h5 light">Contacts</h5>
+                    </div>
+                    <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                    <ul>
+                        <li>
+                            <span>Adress: </span>USA, NY, 7th Street, 89/217
+                        </li>
+                        <li>
+                            <span>E-mail: </span><a href="mailto:barbershop@cartel.com">barbershop@cartel.com</a></li>
+
+                        <li>
+                            <span>Phone</span>: <a href="tel:+80442343456"> 8 (044) 718 34 09</a>
+                        </li>
+                        <li>
+                            <span>Work time: </span>mon - sun / 09:00 - 20:00
+                        </li>
+                    </ul>
+                </div>
+                <div class="empty-space marg-lg-b40"></div>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12">
+                <div class="footer-links">
+                    <div class="simple-text">
+                        <h5 class="h5 light">Quick links</h5>
+                    </div>
+                    <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-6">
+                            <ul>
+                                <li><a href="home2.html">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="team.html">Staff</a></li>
+                                <li><a href="gallery1.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-4 col-xs-6">
+                            <ul class="ul">
+                                <li><a href="#">Offers</a></li>
+                                <li><a href="#testimonials-anchor" class="anchor-link">Testimonials</a></li>
+                                <li><a href="#booking-anchor" class="anchor-link">Booking</a></li>
+                                <li><a href="contacts1.html">Contacts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="empty-space marg-lg-b40"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            © 2018 All Rights reserved. Development by <a href="https://themeforest.net/user/invisiothemes" target="_blank">InvisioThemes</a>
+        </div>
+    </div>
+    <div class="empty-space marg-lg-b35"></div>
+</footer>
+
+<!--Log-in popup-->
+<div class="popup-wrapper">
+    <div class="bg-layer"></div>
+    <div class="popup-content" data-rel="1" id="log-in-popup">
+        <div class="layer-close"></div>
+        <div class="popup-container">
+            <div class="popup-align">
+                <div class="simple-text center">
+                    <div class="h2">Log in</div>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <div class="popup-col-wrap">
+                    <div class="col-50">
+                        <input class="simple-input" type="email" placeholder="Email">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="password" placeholder="Password">
+                        <div class="empty-space marg-lg-b25"></div>
+                        <div class="simple-text">
+                            <p>Forgot your password?</p>
+                        </div>
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="#" class="button type_2 wide">Submit</a>
+                    </div>
+                    <div class="col-50">
+                        <div class="empty-space marg-xs-b30"></div>
+                        <div class="simple-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestiae placeat quae
+                                reiciendis tenetur voluptatem!</p>
+                        </div>
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="#" class="button type_2 half-width">Twitter</a>
+                        <a href="#" class="button type_2 half-width">Facebook</a>
+                    </div>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50 clearfix"></div>
+                <div class="simple-text center">
+                    <a href="#" class="h5 open-popup" data-rel="2">Sign up now</a>
+                </div>
+            </div>
+            <div class="button-close">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Sign-up popup-->
+<div class="popup-wrapper">
+    <div class="bg-layer"></div>
+    <div class="popup-content" data-rel="2" id="sign-up-popup">
+        <div class="layer-close"></div>
+        <div class="popup-container">
+            <div class="popup-align">
+                <div class="simple-text center">
+                    <div class="h2">Sign up</div>
+                </div>
+                <div class="empty-space marg-sm-b30 marg-lg-b50"></div>
+                <div class="popup-col-wrap">
+                    <div class="col-50">
+                        <input class="simple-input" type="text" placeholder="Name">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="email" placeholder="Email">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="password" placeholder="Password">
+                        <div class="empty-space marg-lg-b10"></div>
+                        <input class="simple-input" type="password" placeholder="Repeat password">
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="#" class="button type_2 wide">Submit</a>
+                    </div>
+                    <div class="col-50">
+                        <div class="empty-space marg-xs-b30"></div>
+                        <div class="simple-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestiae placeat quae
+                                reiciendis tenetur voluptatem!</p>
+                        </div>
+                        <div class="empty-space marg-lg-b35"></div>
+                        <a href="#" class="button type_2 half-width">Twitter</a>
+                        <a href="#" class="button type_2 half-width">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="button-close">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--product view popup-->
+<div class="popup-wrapper">
+    <div class="bg-layer"></div>
+    <div class="popup-content" data-rel="3" id="product-view-popup">
+        <div class="layer-close"></div>
+        <div class="popup-container">
+            <div class="popup-align">
+                <div class="popup-col-wrap clearfix">
+                    <div class="col-50">
+                        <img class="responsive" src="../img/homepage1/popup-img.png" alt="">
+                    </div>
+                    <div class="col-50 center-xs">
+                        <div class="empty-space marg-xs-b20"></div>
+                        <div class="simple-text">
+                            <div class="h5">5-piece shaving set with merkup hd 34c</div>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="popup-text">
+                            <span>Price: </span>
+                            <b>148.00$</b>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="popup-text">
+                            <span>Available: </span>
+                            <em>Yes</em>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="simple-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dignissimos dolore eaque fugit
+                                incidunt perspiciatis reprehenderit, unde! Beatae consequuntur corporis eius ex
+                                expeuuntur
+                                eligendi esse in necessitatibus placeat soluta temporibus, tenetur voluptatem!</p>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="popup-text clearfix">
+                            <span>Quanity:</span>
+                            <div class="quantity">
+                                <button class="minus-btn" type="button" name="button">
+                                    <img src="../img/left_arr.png" alt="">
+                                </button>
+                                <input type="text" name="name" value="1">
+
+                                <button class="plus-btn" type="button" name="button">
+                                    <img src="../img/right_arr.png" alt="">
+                                </button>
+                            </div>
+                            <a href="#" class="button type_2">Add to card</a>
+                        </div>
+                        <div class="empty-space marg-xs-b20 marg-lg-b40"></div>
+                        <div class="popup-text">
+                            <span>Share: </span>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-close">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Theme config pop-up-->
+<div class="theme-config">
+    <!--color picking-->
+    <div class="title">Select Color:</div>
+    <div class="colors-wrapper">
+        <input class="jscolor" onchange="updateScheme(this.jscolor)" value="FDA1A4"/>
+    </div>
+    <div class="open-config"><img src="../img/gear-icon.png" alt=""><img src="../img/gear-icon.png" alt=""><img
+            src="../img/gear-icon.png" alt=""></div>
+    <div class="empty-space marg-lg-b10"></div>
+    <div class="title type-2">Select fonts:</div>
+    <div class="simple-text">
+        <h6>Titles</h6>
+    </div>
+    <div class="empty-space marg-lg-b10"></div>
+    <!--fonts picking-->
+    <div class="simple-select">
+        <select id="font-title">
+            <option value="Anton@font-1-1">Anton</option>
+            <option selected value="Josefin+Sans:300,400@font-1-2">Josefin Sans</option>
+            <option value="Hind:700@font-1-3">Hind</option>
+            <option value="Arvo:700@font-1-4">Arvo</option>
+        </select>
+    </div>
+    <div class="empty-space marg-lg-b10"></div>
+    <div class="simple-text">
+        <b>Text</b>
+    </div>
+    <div class="empty-space marg-lg-b10"></div>
+    <div class="simple-select">
+        <select id="font-text">
+            <option value="Kreon:400,700@font-2-1">Kreon</option>
+            <option selected value="Martel:400,700@font-2-2">Martel</option>
+            <option value="Maven+Pro:400,700@font-2-3">Maven Pro</option>
+            <option value="Cabin:400,700@font-2-4">Cabin</option>
+        </select>
+    </div>
+    <div class="empty-space marg-lg-b5"></div>
+</div>
+
+
+<!-- FONTS -->
+<link rel="stylesheet" href="../font/font-awesome-4.7.0/css/font-awesome.min.css">
+
+<!-- CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/swiper.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/simplelightbox.min.css">
+<link rel="stylesheet" href="../css/sumoselect.css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<style id="color-scheme-inline"></style>
+
+<!-- SCRIPTS -->
+<script src="../js/webfont.js"></script>
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script src="../js/swiper.jquery.min.js"></script>
+<script src="../js/jquery.sumoselect.min.js"></script>
+<script src="../js/simple-lightbox.min.js"></script>
+<script src="../js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOJxqBTpjRXdgM8UM0UXuLCmK_AKF9NPs&language=en"></script>
+<script src="../js/isotope-docs.min.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/jscolor.min.js"></script>
+<script src="../js/colorsfonts.js"></script>
+<script src="../js/anchors.nav.js"></script>
+
+</body>
+</html>
