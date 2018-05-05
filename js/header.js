@@ -1,6 +1,6 @@
 (function() {
     var header = `
-        <a href="/" id="logo"><img src="img/main-logo-01.png" alt=""></a>
+        <a href="/" id="logo"><img src="img/main-logo-02.png" alt="" style="height:70px"></a>
         <div class="header-content">
             <nav class="nav">
                 <ul class="nav-list">
@@ -14,7 +14,7 @@
                             <li><a href="products1.html">Ladies</a></li>
                             <li><a href="products2.html">Men's</a></li>
                             <li><a href="products3.html">Kids</a></li>
-                            <li><a href="products4.html">Accessories</a></li>
+                            <li><a href="products4.html"</a></li>
                         </ul>
                     </li>
                     <li class="nav-list-item"><a href="contacts1.html" class="nav-item-link">Contact</a></li>
