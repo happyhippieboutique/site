@@ -27,11 +27,11 @@
                     total: <i>149.95$</i>
                 </span>
             </a>
-            <div class="sign-up">
+            <!--<div class="sign-up">
                 <a href="#" class="open-popup" data-rel="1">Log in</a>
                 <span> / </span>
                 <a href="#" class="open-popup" data-rel="2">Sign up</a>
-            </div>
+            </div>-->
         </div>
         <div class="menu-mobile-wrap">
             <div class="menu-mobile">

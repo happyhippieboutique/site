@@ -54,14 +54,13 @@
                             <ul>
                                 <li><a href="/" >Home</a></li>
                                 <li><a href="about.html">About us</a></li>
-                                <li><a href="team.html">Shop</a></li>
+                                <li><a href="products.html">Shop</a></li>
                                 <!--<li><a href="gallery1.html">Gallery</a></li>-->
                             </ul>
                         </div>
                         <div class="col-md-6 col-sm-4 col-xs-6">
                             <ul class="ul">
-                                <li><a href="#">Offers</a></li>
-                                <li><a href="#testimonials-anchor" class="anchor-link">Contact</a></li>
+                                <li><a href="contact.html" class="anchor-link">Contact</a></li>
                             </ul>
                         </div>
                     </div>
