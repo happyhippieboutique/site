@@ -31,13 +31,10 @@
                             <span>Made With </span><i class="fa fa-heart" style="font-size: 20px"></i> in San Francisco
                         </li>
                         <li>
-                            <span>E-mail: </span><a href="mailto:jennifer@sturigs.io">jennifer@sturgis.io</a></li>
+                            <span>E-mail: </span><a href="mailto:hello@envyclothing.net">hello@envyclothing.net</a></li>
 
                         <li>
-                            <span>Phone</span>: <a href="555-555-5555"> (555) 555-5555</a>
-                        </li>
-                        <li>
-                            <span>Work time: </span>mon - sun / 09:00 - 20:00
+                            <span>Phone</span>: <a href="503-915-9915"> (503) 915-9915</a>
                         </li>
                     </ul>
                 </div>

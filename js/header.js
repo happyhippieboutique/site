@@ -24,7 +24,7 @@
                 <img src="img/busket.png" alt="">
                 <span class="busket-amount">1</span>
                 <span class="busket-price">
-                    total: <i>149.95$</i>
+                    total: <i>$149.99</i>
                 </span>
             </a>
             <!--<div class="sign-up">
