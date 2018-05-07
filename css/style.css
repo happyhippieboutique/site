@@ -463,20 +463,20 @@ a:focus {
 
 .button.type_5 {
     padding: 20px 30px;
-    border: 3px solid #BA3856;
-    color: #BA3856;
+    border: 3px solid #2EBCCD;
+    color: #2EBCCD;
     border-radius: 0;
     cursor: pointer;
     font-weight: bold;
 }
 
 .button.type_5:hover {
-    background-color: #BA3856;
+    background-color: #2EBCCD;
     color: #fff;
 }
 
 .button.type_5.filled {
-    background-color: #BA3856;
+    background-color: #2EBCCD;
     color: #fff;
 }
 
@@ -2870,7 +2870,7 @@ a:focus {
 }
 
 .social_icon li a {
-    background-color: #BA3856;
+    background-color: #2EBCCD;
     display: block;
     width: 32px;
     height: 32px;
@@ -3043,7 +3043,7 @@ a:focus {
 }
 
 .salon_iteams p span {
-    color: #BA3856;
+    color: #2EBCCD;
 }
 
 .salon_iteams.small_descr .col-50 {
@@ -3229,7 +3229,7 @@ a:focus {
     width: 100%;
     height: 100%;
     background-color: transparent;
-    border: 10px solid #BA3856;
+    border: 10px solid #2EBCCD;
     opacity: 0;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
@@ -3332,7 +3332,7 @@ a:focus {
 }
 
 .whoWe_are_descr i {
-    color: #BA3856;
+    color: #2EBCCD;
     font-size: 30px;
 }
 
@@ -3579,7 +3579,7 @@ a:focus {
     position: absolute;
     left: 30px;
     bottom: 30px;
-    color: #BA3856;
+    color: #2EBCCD;
 }
 
 .ourTeam_3_1.left .slide-count {
@@ -3749,12 +3749,12 @@ a:focus {
 
 .filter_btn .spusok.active i,
 .filter_btn .list.active i {
-    color: #ba3856;
-    border-color: #ba3856;
+    color: #2EBCCD;
+    border-color: #2EBCCD;
 }
 
 .productsWrapper_price .price span {
-    color: #ba3856;
+    color: #2EBCCD;
     font-size: 20px;
     letter-spacing: 1px;
 }
@@ -3825,11 +3825,11 @@ a:focus {
 
 .checkbox-entry input:checked + span:after {
     opacity: 1;
-    color: #ba3856;
+    color: #2EBCCD;
 }
 
 .checkbox-entry.radio input:checked + span {
-    color: #ba3856;
+    color: #2EBCCD;
 }
 
 .simple-filter-title {
@@ -3891,7 +3891,7 @@ a:focus {
     height: 100%;
     display: block;
     border: 0;
-    background: #BA3856;
+    background: #2EBCCD;
     background-position: 0 0;
     z-index: 1;
 }
@@ -3902,7 +3902,7 @@ a:focus {
     -ms-touch-action: none;
     width: 4px;
     height: 15px;
-    background: #BA3856;
+    background: #2EBCCD;
     touch-action: none;
     z-index: 2;
     cursor: pointer;
@@ -4014,8 +4014,8 @@ a:focus {
     .sidebar {
         display: none;
         margin-top: 40px;
-        border-bottom: 1px solid #BA3856;
-        border-top: 1px solid #BA3856;
+        border-bottom: 1px solid #2EBCCD;
+        border-top: 1px solid #2EBCCD;
         padding: 25px;
         margin-bottom: 30px;
     }
@@ -4035,7 +4035,7 @@ a:focus {
     }
 
     .cattegory i {
-        color: #BA3856;
+        color: #2EBCCD;
     }
 
     .cattegory i.rotate {
@@ -4104,7 +4104,7 @@ a:focus {
 }
 
 .founded span {
-    color: #BA3856;
+    color: #2EBCCD;
 }
 
 .cartel_shop .simple-select.in {
@@ -4204,7 +4204,7 @@ a:focus {
 }
 
 .pagination_shop li.active a {
-    border-color: #BA3856;
+    border-color: #2EBCCD;
 }
 
 .pagination_shop li a {
@@ -4226,7 +4226,7 @@ a:focus {
 }
 
 .pagination_shop li a:hover {
-    border-color: #BA3856;
+    border-color: #2EBCCD;
 }
 
 .pagination_arrows {
@@ -4242,7 +4242,7 @@ a:focus {
 }
 
 .pagination_arrows:hover {
-    color: #BA3856;
+    color: #2EBCCD;
 }
 
 .button-group .btn_isotop {
@@ -4257,11 +4257,11 @@ a:focus {
 }
 
 .button-group .btn_isotop:hover {
-    color: #BA3856;
+    color: #2EBCCD;
 }
 
 .btn_isotop.is-checked {
-    color: #BA3856;
+    color: #2EBCCD;
 }
 
 .content_block {
@@ -4276,7 +4276,7 @@ a:focus {
 
 .content_block em {
     font-size: 20px;
-    color: #BA3856;
+    color: #2EBCCD;
 }
 
 .content_block .social {
@@ -4350,7 +4350,7 @@ a:focus {
 
 .star_rating li {
     display: inline-block;
-    color: #BD3857;
+    color: #2EBCCD;
 }
 
 .star_rating li I {
@@ -4422,7 +4422,7 @@ a:focus {
 }
 
 .color_cub.pink2:before {
-    border: 1px solid #F06EAA;
+    border: 1px solid #2EBCCD;
 }
 
 .my_product .social {
@@ -4445,7 +4445,7 @@ a:focus {
 }
 
 .my_product .social li a {
-    background-color: #BA3856;
+    background-color: #2EBCCD;
 }
 
 .my_productDescr ul li {
@@ -4503,7 +4503,7 @@ a:focus {
 }
 
 .whoWe_are_descr .social a {
-    background-color: #BA3856;
+    background-color: #2EBCCD;
 }
 
 .contactUS .simple-text {
@@ -4542,7 +4542,7 @@ a:focus {
 
 .cn_title .icon i {
     font-size: 25px;
-    color: #BA3856;
+    color: #2EBCCD;
 }
 
 .cn_title .simple-text {
@@ -4559,7 +4559,7 @@ a:focus {
 }
 
 .shopping_cart .price span {
-    color: #ba3856;
+    color: #2EBCCD;
 }
 
 .shopping_cart .quantity {
@@ -4568,7 +4568,7 @@ a:focus {
 }
 
 .total {
-    color: #ba3856;
+    color: #2EBCCD;
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 1px;
@@ -4690,7 +4690,7 @@ a:focus {
 }
 
 .total_price span {
-    color: #ba3856;
+    color: #2EBCCD;
     margin-left: 10px;
     font-weight: normal;
 }
@@ -5513,12 +5513,12 @@ a:focus {
 }
 
 .discount-banners .bannerPackage:hover .discount-banners-desc {
-    border-color: #ba3856;
+    border-color: #2EBCCD;
 }
 
 .discount-banners .bannerPackage:hover .discount-banners-desc:before,
 .discount-banners .bannerPackage:hover .discount-banners-desc:after {
-    background-color: #ba3856;
+    background-color: #2EBCCD;
 }
 
 .discount-banners-desc p {
@@ -5530,7 +5530,7 @@ a:focus {
 
 .discount-banners-desc p span {
     text-transform: lowercase;
-    color: #ba3856;
+    color: #2EBCCD;
 }
 
 /*swiper buttons type-4*/
@@ -5785,7 +5785,7 @@ a:focus {
 .fc-toolbar h2 {
     text-transform: uppercase;
     margin-bottom: 60px;
-    color: #ba3856;
+    color: #2EBCCD;
 }
 
 .fc-day-top:hover {
@@ -5893,7 +5893,7 @@ a:focus {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #ba3856;
+    background: #2EBCCD;
 }
 
 .calendar-highlights-item:nth-child(2):before {
