@@ -38,27 +38,26 @@ var url = new URL(window.location.href)
 // Fetch a single product by ID
 const productId = window.btoa("gid://shopify/Product/" + url.searchParams.get("product")); //625662492731
 
+if (window.location.href.indexOf('product-detail.html') != -1) {
+    client.product.fetch(productId).then((product) => {
+        console.log(product);
+        
+        document.getElementById("product-title").innerHTML = product.title;
+        document.getElementById("description-short").innerHTML = product.descriptionHtml;
+        document.getElementById("product-picture-1").src = product.images[0].src;
+        document.getElementById("product-picture-1-thumb").src = product.images[0].src;
 
-client.product.fetch(productId).then((product) => {
-    console.log(product);
-    
-    document.getElementById("product-title").innerHTML = product.title;
-    document.getElementById("description-short").innerHTML = product.description;
-    document.getElementById("product-picture-1").src = product.images[0].src;
-    document.getElementById("product-picture-1-thumb").src = product.images[0].src;
-
-    var sizes = product.options.find(x => x.name === "Size")
-    if (typeof sizes != "undefined") {
-        var select = document.getElementById("product-size");
-        sizes.values.forEach(function(e) {
-            var size = document.createElement("option");
-            size.text = e.value;
-            size.value = e.value;
-            select.add(size);
-        });
-        updateVariantInfo();
-        select.onchange = updateVariantInfo;
-    } // else do without variant
-
-
-});
+        var sizes = product.options.find(x => x.name === "Size")
+        if (typeof sizes != "undefined") {
+            var select = document.getElementById("product-size");
+            sizes.values.forEach(function(e) {
+                var size = document.createElement("option");
+                size.text = e.value;
+                size.value = e.value;
+                select.add(size);
+            });
+            updateVariantInfo();
+            select.onchange = updateVariantInfo;
+        } // else do without variant
+    });
+}
