@@ -9,12 +9,12 @@
                     <li class="nav-list-item"><a href="/" class="nav-item-link active">Home</a></li>
                     <li class="nav-list-item"><a href="about.html" class="nav-item-link">About us</a></li>
                     <li class="nav-list-item sub-menu-item">
-                        <a href="#" class="nav-item-link">Shop<i class="fa fa-angle-down"></i></a>
+                        <a href="products.html" class="nav-item-link">Shop<i class="fa fa-angle-down"></i></a>
                         <ul class="sub-menu">
-                            <li><a href="products1.html">Ladies</a></li>
-                            <li><a href="products2.html">Men's</a></li>
-                            <li><a href="products3.html">Kids</a></li>
-                            <li><a href="products4.html"</a></li>
+                            <li><a href="products.html?collection=36392894523">Ladies</a></li>
+                            <li><a href="products.html?collection=36020682811">Men's</a></li>
+                            <li><a href="products.html?collection=38947094587">Kids</a></li>
+                            <li><a href="products.html?collection=36392927291">Accessories</a></li>
                         </ul>
                     </li>
                     <li class="nav-list-item"><a href="contacts1.html" class="nav-item-link">Contact</a></li>
