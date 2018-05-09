@@ -88,7 +88,7 @@ if (window.location.href.indexOf('products.html') != -1) {
 function printProducts(products) {
     var list = document.getElementById('productList');
     var productTemplate = `
-        <div class="col-md-4 col-sm-6 col-xs-12 element-item">
+        <div class="col-md-3 col-sm-6 col-xs-12 grid-item">
             <div class="flex">
                 <div class="productsWrapper_Img">
                     <a href="product-detail.html?product={{productId}}">

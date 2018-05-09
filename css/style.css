@@ -4931,6 +4931,14 @@ a:focus {
     }
 }
 
+.grid-item {
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.grid-item--width2 { width: 50%; }
+
 .gallery.element-item {
     width: 24%;
     float: left;
