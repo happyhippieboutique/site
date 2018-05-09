@@ -1,12 +1,12 @@
 (function() {
     var header = `
-        <a href="/" id="logo"><img src="img/main-logo-02.png" alt="" style="height:70px"></a>
+        <a href="index.html" id="logo"><img src="img/main-logo-02.png" alt="" style="height:70px"></a>
         <div class="header-content">
             <nav class="nav">
                 <ul class="nav-list">
                     <!-- add class 'active' to highlight current link -->
                     <!-- after li/a element, add ul with class 'sub-menu' with child li/a elements to create a drop down -->
-                    <li class="nav-list-item"><a href="/" class="nav-item-link active">Home</a></li>
+                    <li class="nav-list-item"><a href="index.html" class="nav-item-link active">Home</a></li>
                     <li class="nav-list-item"><a href="about.html" class="nav-item-link">About us</a></li>
                     <li class="nav-list-item sub-menu-item">
                         <a href="products.html" class="nav-item-link">Shop<i class="fa fa-angle-down"></i></a>
