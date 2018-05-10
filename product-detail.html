@@ -213,6 +213,7 @@
                         <div class="swiperMainWrapper">
                             <div class="swiper-container swiper-control-top">
                                 <div class="swiper-wrapper">
+                                    <!-- dynamically generate this list -->
                                     <div class="swiper-slide activeSlide">
                                         <div class="content">
                                             <img id="product-picture-1" class="responsive" src="img/homepage2/tabs.jpg" alt="">
@@ -238,6 +239,7 @@
                             <div class="swiper-container" data-space-between="10" data-breakpoints="1"
                                  data-slides-per-view="4" data-md-slides="4" data-sm-slides="3" data-xs-slides="2">
                                 <div class="swiper-wrapper">
+                                    <!-- dynamically generate this -->
                                     <div class="swiper-slide active">
                                         <div class="content controlTopSwiper">
                                             <img id="product-picture-1-thumb" class="responsive" src="img/homepage2/tabs.jpg" alt="">
@@ -274,13 +276,13 @@
                     <div class="empty-space marg-sm-b20 marg-lg-b30"></div>
                     <div class="content_block">
                         <span>reviews:</span>
-                        <em>26</em>
+                        <em>0</em>
                         <ul class="star_rating">
-                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                             <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                         </ul>
                     </div>
@@ -290,41 +292,36 @@
                         <em id="product-isavailable">No</em>
                     </div>
                     <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
-                    <div class="content_block">
+                    <div id="product-container-color" class="content_block"  hidden>
                         <span>color:</span>
-                        <div class="cl_cub">
-                            <div class="color_cub"></div>
-                            <div class="color_cub orange"></div>
-                            <div class="color_cub pink"></div>
-                            <div class="color_cub pink2"></div>
+                        <div class="quantity">
+                            <select id="product-color"></select>
                         </div>
                     </div>
                     <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
-                    <div class="content_block">
+                    <div id="product-container-size" class="content_block"  hidden>
                         <span>size:</span>
                         <div class="quantity">
-                            <select id="product-size">
-                            </select>
+                            <select id="product-size"></select>
                         </div>
                     </div>
                     <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
-                    <div class="content_block">
+                    <div id="product-container-year" class="content_block" hidden>
                         <span>Year:</span>
                         <div class="quantity">
-                            <select id="year">
-                            </select>
+                            <select id="product-year"></select>
                         </div>
                     </div>
                     <div class="empty-space marg-sm-b20 marg-lg-b20"></div>
                     <div class="content_block">
                         <span>quanity:</span>
                         <div class="quantity">
-                            <button class="minus-btn" type="button" name="button">
+                            <button class="minus-btn" type="button" name="button" disabled>
                                 <img src="img/left_arr.png" alt="">
                             </button>
-                            <input type="text" name="name" value="1">
+                            <input type="text" name="name" value="1" disabled>
 
-                            <button class="plus-btn" type="button" name="button">
+                            <button class="plus-btn" type="button" name="button" disabled>
                                 <img src="img/right_arr.png" alt="">
                             </button>
                         </div>
