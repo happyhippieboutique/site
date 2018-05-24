@@ -19,9 +19,11 @@
         
     }
 
+    /*
     shopify.store.collection.fetchWithProducts(collectionId).then((collection) => {
         printProducts(collection.products);
     });
+    */
 
     function variantLookup(v) {
         var match = true;
