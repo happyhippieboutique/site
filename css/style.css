@@ -3960,6 +3960,10 @@ a:focus {
     }
 }
 
+.productsWrapper_text {
+    height: 44px;
+}
+
 .productsWrapper.list_class .productsWrapper_text {
     margin-left: 30px;
 }
